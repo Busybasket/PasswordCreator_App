@@ -11,9 +11,9 @@ pady2 = 400
 root = Tk()
 root.geometry("1280x720")
 root.attributes("-fullscreen",True)
-"""root.iconbitmap('Your Icon')"""
+#root.iconbitmap('Your Icon')
 root.configure(bg="#bdbdbd")
-def Menu():
+def Menu(): #Creating Password Menu
     C_Password_Label = Label(frame,text="Create a Password",font=Font_Text)
     C_Password_Label.place(relx=0.5,rely=-2.8,anchor=CENTER)
     C_Password_Title = Label(frame,text="Your Password Title :",font=Font_Text2)
@@ -26,7 +26,7 @@ def Menu():
     C_Password_Input.place(relx=0.38,rely=-0.8,anchor=CENTER)
     C_Password_Submit = Button(frame,text="Submit",command=lambda: Click_Submit(C_Password_Title_Input.get(),C_Password_Input.get()))
     C_Password_Submit.place(relx=0.5,rely=0.5,anchor=CENTER,)
-def Menu2():
+def Menu2(): #Listing Password Menu
     M_Title_Label = Label(frame,text="Title ",font=Font_Text)
     M_Title_Label.place(relx=0.3,rely=-2.5,anchor=CENTER)
     M_Password_Label = Label(frame,text="Password",font=Font_Text)
@@ -44,7 +44,7 @@ def Menu2():
     M_Label3 = Label(frame,text=output3,font=Font_Text2)
     M_Label3.place(relx=0.5,rely=-0.8,anchor=CENTER)  
 
-def Click_Submit(Title_input,Password_input):
+def Click_Submit(Title_input,Password_input):  #when clicked submit
     dosya = open("passwords.txt","a",encoding="utf-8")
     pLetters = []
     for i in range(0,len(Password_input)):
@@ -64,7 +64,7 @@ def Click_Submit(Title_input,Password_input):
     
     
 def C_Password_F():
-    if C_Password_Button['state'] == NORMAL:
+    if C_Password_Button['state'] == NORMAL:  #Disabling-Enabling Button 
         C_Password_Button['state'] = DISABLED
         C_Password_Button['bg'] = "white"
         if L_Password_Button['state'] == DISABLED:
@@ -75,7 +75,7 @@ def C_Password_F():
     Menu()
 
 def L_Password_F():
-    if L_Password_Button['state'] == NORMAL:
+    if L_Password_Button['state'] == NORMAL:  #Disabling-Enabling Button
         L_Password_Button['state'] = DISABLED
         L_Password_Button['bg'] = "white"
         if C_Password_Button['state'] == DISABLED:
