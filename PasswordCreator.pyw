@@ -3,7 +3,6 @@ import random
 Font_Button = ("Arial",8,)
 Font_Text = ("Arial Black",20)
 Font_Text2 = ("Arial",15)
-Passwords = {}
 padx_main = 80
 pady_main = 400
 padx2 = 400
