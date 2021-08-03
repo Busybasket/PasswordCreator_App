@@ -64,7 +64,7 @@ def Click_Submit(Title_input,Password_input):  #when clicked submit
     
     
 def C_Password_F():
-    if C_Password_Button['state'] == NORMAL:  #Disabling-Enabling Button 
+    if C_Password_Button['state'] == NORMAL:  #Disabling-Enabling the Button 
         C_Password_Button['state'] = DISABLED
         C_Password_Button['bg'] = "white"
         if L_Password_Button['state'] == DISABLED:
@@ -75,7 +75,7 @@ def C_Password_F():
     Menu()
 
 def L_Password_F():
-    if L_Password_Button['state'] == NORMAL:  #Disabling-Enabling Button
+    if L_Password_Button['state'] == NORMAL:  #Disabling-Enabling the Button
         L_Password_Button['state'] = DISABLED
         L_Password_Button['bg'] = "white"
         if C_Password_Button['state'] == DISABLED:
