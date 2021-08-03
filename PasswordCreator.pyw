@@ -11,7 +11,7 @@ pady2 = 400
 root = Tk()
 root.geometry("1280x720")
 root.attributes("-fullscreen",True)
-root.iconbitmap('C:/Users/Emin/Documents/Python/icon.ico')
+"""root.iconbitmap('Your Icon')"""
 root.configure(bg="#bdbdbd")
 def Menu():
     C_Password_Label = Label(frame,text="Create a Password",font=Font_Text)
